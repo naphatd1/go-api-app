@@ -1,6 +1,9 @@
 name: Github Actions CI
 
-on: [push]
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   build-job:
@@ -11,3 +14,4 @@ jobs:
         with:
           go-version: '1.24.3'
       - run: go version
+      - run: echo "Running tests..."
